@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /images/
+Sitemap: https://asakusakarina.github.io./sitemap.xml

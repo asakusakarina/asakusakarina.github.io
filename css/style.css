@@ -114,8 +114,8 @@ button::-moz-focus-inner {
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
-  src: url("fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("css/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("css/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("css/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("css/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("css/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("css/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
 }
 html,
 body,
@@ -311,6 +311,8 @@ body {
   height: 300px;
   position: relative;
   border-bottom: 1px solid #ddd;
+  background: #fff;
+  opacity: 0.6;
 }
 #header:before,
 #header:after {
@@ -348,7 +350,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("images/banner.jpg") center #000;
+  background: url("/css/images/banner.jpg") center #000;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -367,7 +369,7 @@ body {
   text-decoration: none;
   color: #fff;
   font-weight: 300;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
 }
 #logo {
   font-size: 40px;
@@ -390,9 +392,9 @@ body {
 .main-nav-link {
   float: left;
   color: #fff;
-  opacity: 0.6;
+  opacity: 0.8;
   text-decoration: none;
-  text-shadow: 0 1px rgba(0,0,0,0.2);
+  text-shadow: 0 1px rgba(0,0,0,0.8);
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -ms-transition: opacity 0.2s;
@@ -415,7 +417,6 @@ body {
   cursor: pointer;
 }
 .main-nav-link {
-  font-weight: 300;
   letter-spacing: 1px;
 }
 @media screen and (max-width: 479px) {
@@ -728,14 +729,8 @@ a.article-title:hover {
   padding-right: 8px;
 }
 .article-share-link {
-  cursor: pointer;
   float: right;
   margin-left: 20px;
-}
-.article-share-link:before {
-  content: "\f064";
-  font-family: FontAwesome;
-  padding-right: 6px;
 }
 #article-nav {
   position: relative;
@@ -859,33 +854,38 @@ a.article-title:hover {
 .article-share-twitter,
 .article-share-facebook,
 .article-share-pinterest,
+.article-share-hatena,
 .article-share-linkedin {
-  width: 50px;
-  height: 36px;
+  width: 20px;
+  height: 20px;
   display: block;
-  float: left;
+  float: right;
   position: relative;
   color: #999;
   text-shadow: 0 1px #fff;
+  margin: 0 0 0 10px;
 }
 .article-share-twitter:before,
 .article-share-facebook:before,
 .article-share-pinterest:before,
+.article-share-hatena:before,
 .article-share-linkedin:before {
-  font-size: 20px;
+  font-size: 18px;
   font-family: FontAwesome;
-  width: 20px;
-  height: 20px;
+  font-weight: normal;
+  width: 18px;
+  height: 18px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -10px;
-  margin-left: -10px;
+  margin-top: -9px;
+  margin-left: -9px;
   text-align: center;
 }
 .article-share-twitter:hover,
 .article-share-facebook:hover,
 .article-share-pinterest:hover,
+.article-share-hatena:hover,
 .article-share-linkedin:hover {
   color: #fff;
 }
@@ -893,7 +893,7 @@ a.article-title:hover {
   content: "\f099";
 }
 .article-share-twitter:hover {
-  background: #00aced;
+  color: #00aced !important;
   text-shadow: 0 1px #008abe;
 }
 .article-share-facebook:before {
@@ -909,6 +909,15 @@ a.article-title:hover {
 .article-share-pinterest:hover {
   background: #cb2027;
   text-shadow: 0 1px #a21a1f;
+}
+.article-share-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+}
+.article-share-hatena:hover {
+  background: #00a4de;
+  text-shadow: 0 1px #0083b2;
 }
 .article-share-linkedin:before {
   content: "\f0e1";
