@@ -729,14 +729,8 @@ a.article-title:hover {
   padding-right: 8px;
 }
 .article-share-link {
-  cursor: pointer;
   float: right;
   margin-left: 20px;
-}
-.article-share-link:before {
-  content: "\f064";
-  font-family: FontAwesome;
-  padding-right: 6px;
 }
 #article-nav {
   position: relative;
@@ -860,33 +854,38 @@ a.article-title:hover {
 .article-share-twitter,
 .article-share-facebook,
 .article-share-pinterest,
+.article-share-hatena,
 .article-share-linkedin {
-  width: 50px;
-  height: 36px;
+  width: 20px;
+  height: 20px;
   display: block;
-  float: left;
+  float: right;
   position: relative;
   color: #999;
   text-shadow: 0 1px #fff;
+  margin: 0 0 0 10px;
 }
 .article-share-twitter:before,
 .article-share-facebook:before,
 .article-share-pinterest:before,
+.article-share-hatena:before,
 .article-share-linkedin:before {
-  font-size: 20px;
+  font-size: 18px;
   font-family: FontAwesome;
-  width: 20px;
-  height: 20px;
+  font-weight: normal;
+  width: 18px;
+  height: 18px;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -10px;
-  margin-left: -10px;
+  margin-top: -9px;
+  margin-left: -9px;
   text-align: center;
 }
 .article-share-twitter:hover,
 .article-share-facebook:hover,
 .article-share-pinterest:hover,
+.article-share-hatena:hover,
 .article-share-linkedin:hover {
   color: #fff;
 }
@@ -894,7 +893,7 @@ a.article-title:hover {
   content: "\f099";
 }
 .article-share-twitter:hover {
-  background: #00aced;
+  color: #00aced !important;
   text-shadow: 0 1px #008abe;
 }
 .article-share-facebook:before {
@@ -910,6 +909,15 @@ a.article-title:hover {
 .article-share-pinterest:hover {
   background: #cb2027;
   text-shadow: 0 1px #a21a1f;
+}
+.article-share-hatena:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold;
+}
+.article-share-hatena:hover {
+  background: #00a4de;
+  text-shadow: 0 1px #0083b2;
 }
 .article-share-linkedin:before {
   content: "\f0e1";
